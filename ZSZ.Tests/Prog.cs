@@ -32,6 +32,7 @@ namespace ZSZ.Tests
             {
                 return 0;
             }*/
+			int i=2;
             return i + j;
         }
 
