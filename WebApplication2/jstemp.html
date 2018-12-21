@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="template.js"></script>
+    <script id="s1" type="text/html">
+        {{each list1 as item}}
+        <tr><td>{{item.name}}</td><td>{{item.url}}</td></tr>
+        {{/each}}
+    </script>
+    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var data = [{ name: "如鹏网", url: "www.rupeng.com" }, { name: "QQ", url: "www.qq.com" }];
+            /*
+            for (var i = 0; i < data.length; i++)
+            {
+                var item = data[i];
+                $("<tr><td style='color:red'>" + item.name + "</td><td>" + item.url + "</td><tr>")
+                    .appendTo($("#t1"));
+            }*/
+            var html = template('s1', {list1:data});
+            alert(html);
+            $("#t1").html(html);
+        });
+    </script>
+</head>
+<body>
+    <table id="t1">
+        
+    </table>
+</body>
+</html>
